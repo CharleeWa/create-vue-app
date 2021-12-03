@@ -1,0 +1,67 @@
+// Font Style
+
+@fontRegular:"PingFangSC-Regular","PingFang SC","Helvetica","STHeiti", "Microsoft YaHei","sans-serif";
+@fontMedium:"PingFangSC-Medium","PingFang SC","Helvetica","STHeiti","Microsoft YaHei","sans-serif";
+@fontSemibold:"PingFangSC-Semibold","PingFang SC","Helvetica","STHeiti","Microsoft YaHei","sans-serif";
+
+// Color Palette
+@black: #000;
+@white: #fff;
+@gray-1: #f7f8fa;
+@gray-2: #f2f3f5;
+@gray-3: #ebedf0;
+@gray-4: #dcdee0;
+@gray-5: #c8c9cc;
+@gray-6: #969799;
+@gray-7: #646566;
+@gray-8: #323233;
+@red: #ee0a24;
+@blue: #1989fa;
+@orange: #ff976a;
+@orange-dark: #ed6a0c;
+@orange-light: #fffbe8;
+@green: #07c160;
+
+
+/***
+  * navbar 
+*/
+.navbar img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+}
+.navbar .van-nav-bar__title {
+  font-family:@fontMedium;
+  font-weight: 600;
+}
+.van-nav-bar--fixed {
+  width: 375px;
+  left: auto ;
+}
+
+
+/**
+**  tabbar
+**/
+.van-tabbar--fixed,.van-sticky--fixed{
+  width: 375px;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.van-hairline--top-bottom::after{
+  border-top: 2px solid #F5F5F5;
+}
+
+
+/**
+ActionSheet
+**/
+.van-action-sheet{
+  width: 375px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
