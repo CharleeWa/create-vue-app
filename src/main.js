@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
 // pc 版心设置 1200vw
 import 'root-font-size'
 import 'amfe-flexible'

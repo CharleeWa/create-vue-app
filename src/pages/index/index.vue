@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <div class="user-info"> Hello! {{ avatar }} - {{ name }} </div>
+    <div class="vue-logo">
+      <img v-if="name" :src="logo" alt="logo">
+    </div>
+
+    <div v-if="name" class="user-info"> Welcome ~ {{ avatar }} {{ name }} </div>
   </div>
 </template>
 
@@ -12,7 +16,8 @@ export default {
   data () {
     return {
       name: '',
-      avatar: ''
+      avatar: '',
+      logo: require('@/assets/images/vue-logo.png')
     }
   },
 
@@ -27,8 +32,8 @@ export default {
       const { GetInfo } = this
 
       GetInfo().then((res) => {
-        let { name, avatar } = res.result
-        this.name = name
+        let { username, avatar } = res.result
+        this.name = username
         this.avatar = avatar
       }).catch(err => {
         console.log(err)
@@ -45,12 +50,24 @@ export default {
   position: relative;
 }
 
+.vue-logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+
+  & > img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .user-info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 16px;
 }
 </style>

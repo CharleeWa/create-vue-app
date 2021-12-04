@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== 'production' || process.env.VUE_APP_PREVIEW === 'tr
    * code：http://mockjs.com/examples.html
    */
   Mock.setup({
-    timeout: 1000 // setter delay time
+    timeout: 500 // setter delay time
   })
   console.log('[create-vue-app] mock mounted')
 }

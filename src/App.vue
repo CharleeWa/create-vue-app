@@ -6,21 +6,24 @@
 
 <style lang="less">
 body {
-  font-family:@fontRegular;
+  font-family: @fontRegular;
   font-size: 16px;
   min-height: 100vh;
   background:rgba(255,255,255,1);
   -webkit-font-smoothing: antialiased;
 }
 
-/**进度条颜色重置 */
+// reset nprogress color
+
+@npgColor: #1296db;
+
 #nprogress {
   .bar {
-    background: #0abc43 !important;
+    background: @npgColor !important;
   }
   .spinner-icon {
-    border-top-color: #0abc43 !important;
-    border-left-color:#0abc43 !important;
+    border-top-color: @npgColor !important;
+    border-left-color: @npgColor !important;
   }
 }
 </style>
